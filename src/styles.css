@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap");
+
+/* Universal reset */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: "Poppins", sans-serif;
+}
