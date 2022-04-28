@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TasksService } from '../../services/tasks.service';
+import { LoggerService } from '../../services/logger.service';
 import { Task } from '../../task';
 
 @Component({
@@ -10,9 +11,15 @@ import { Task } from '../../task';
 export class TasksComponent implements OnInit {
   tasks: Task[] = [];
 
-  constructor(private tasksService: TasksService) {}
+  constructor(
+    private tasksService: TasksService,
+    private loggerService: LoggerService
+  ) {}
 
   ngOnInit(): void {
-    this.tasksService.getTasks().subscribe((tasks) => (this.tasks = tasks));
+    this.tasksService.getTasks().subscribe((tasks) => {
+      this.loggerService.log(`There are ${tasks.length} tasks in the list`);
+      this.tasks = tasks;
+    });
   }
 }
