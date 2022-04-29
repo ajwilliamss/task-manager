@@ -17,3 +17,13 @@
   color: red;
   cursor: pointer;
 }
+
+.complete {
+  opacity: 0.5;
+}
+
+.complete-icon {
+  margin-left: 0.5rem;
+  color: teal;
+  cursor: pointer;
+}

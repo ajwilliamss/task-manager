@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from '../../task';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-task-item',
@@ -9,8 +9,10 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 })
 export class TaskItemComponent implements OnInit {
   @Input() task!: Task;
-  faTimes = faTimes;
   @Output() onClick: EventEmitter<Task> = new EventEmitter();
+  @Output() onToggle: EventEmitter<Task> = new EventEmitter();
+  faTimes = faTimes;
+  faCheck = faCheck;
 
   constructor() {}
 
@@ -18,5 +20,9 @@ export class TaskItemComponent implements OnInit {
 
   handleClick(task: Task): void {
     this.onClick.emit(task);
+  }
+
+  handleToggle(task: Task): void {
+    this.onToggle.emit(task);
   }
 }

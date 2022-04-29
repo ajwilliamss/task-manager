@@ -28,4 +28,16 @@ export class TasksComponent implements OnInit {
       this.tasks = this.tasks.filter((item) => item.id !== task.id);
     });
   }
+
+  handleUpdate(task: Task): void {
+    task.completed = !task.completed;
+
+    this.tasksService.updateTask(task).subscribe(() => {
+      if (task.completed) {
+        this.loggerService.log(`${task.text} is complete`);
+      } else {
+        this.loggerService.log(`${task.text} is not complete`);
+      }
+    });
+  }
 }
