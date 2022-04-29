@@ -1,6 +1,6 @@
 <div class="task">
   <div class="task-info">
-    <h3>{{task.text}} <fa-icon [icon]="faTimes" size="lg" class="del-icon"></fa-icon>
+    <h3>{{task.text}} <fa-icon [icon]="faTimes" size="lg" class="del-icon" (click)="handleClick(task)"></fa-icon>
     </h3>
     <p>{{task.time}}</p>
   </div>
