@@ -1,11 +1,26 @@
 .add-task-form {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin: 1rem 0;
+  margin: 2rem 0;
+}
+
+.add-task-form input {
+  width: 200px;
 }
 
 .add-task-form input:first-child {
   font-size: 1rem;
   padding: 0.1rem;
+}
+
+.add-task-form button {
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: teal;
+  border-radius: 5px;
+  cursor: pointer;
 }

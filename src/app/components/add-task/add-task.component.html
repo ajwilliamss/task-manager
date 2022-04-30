@@ -1,6 +1,7 @@
-<form class="add-task-form">
-  <input type="text" name="name" id="name" placeholder="Task Name" [(ngModel)]="name">
-  <input type="time" name="time" id="time" [(ngModel)]="time">
+<form class="add-task-form" (ngSubmit)="handleSubmit()">
+  <input type="text" name="name" id="name" placeholder="Task Name" [(ngModel)]="name" required>
+  <input type="time" name="time" id="time" [(ngModel)]="time" required>
+  <button type="submit">Submit</button>
 </form>
 <!-- Testing two-way data binding -->
 <!-- {{name}} -->

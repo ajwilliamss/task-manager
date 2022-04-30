@@ -1,6 +1,5 @@
 <div class="add-task-container">
-  <app-add-task></app-add-task>
-  <app-button text="Add Task" colour="teal" (onClick)="handleAdd()"></app-button>
+  <app-add-task (onSubmit)="handleAdd($event)"></app-add-task>
   <app-task-item *ngFor="let task of tasks" [task]="task" (onClick)="handleDelete(task)"
     (onToggle)="handleUpdate(task)">
   </app-task-item>

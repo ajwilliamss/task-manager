@@ -1,21 +1,27 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "text": "Buy groceries",
+      "id": "1",
+      "name": "Buy groceries",
       "time": "18:00",
       "completed": false
     },
     {
-      "id": 2,
-      "text": "Go to the gym",
+      "id": "2",
+      "name": "Go to the gym",
       "time": "19:00",
       "completed": false
     },
     {
-      "id": 3,
-      "text": "Book plane tickets",
+      "id": "3",
+      "name": "Book plane tickets",
       "time": "20:30",
+      "completed": false
+    },
+    {
+      "id": "b16d788a-f844-495d-aa0f-b225e268c201",
+      "name": "Study for exam",
+      "time": "21:00",
       "completed": false
     }
   ]

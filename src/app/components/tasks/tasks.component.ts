@@ -23,8 +23,11 @@ export class TasksComponent implements OnInit {
     });
   }
 
-  handleAdd(): void {
-    console.log('Add task');
+  handleAdd(task: Task): void {
+    this.tasksService.addTask(task).subscribe(() => {
+      this.loggerService.log(`${task.name} has been added`);
+      this.tasks.push(task);
+    });
   }
 
   handleDelete(task: Task): void {
@@ -38,9 +41,9 @@ export class TasksComponent implements OnInit {
 
     this.tasksService.updateTask(task).subscribe(() => {
       if (task.completed) {
-        this.loggerService.log(`${task.text} is complete`);
+        this.loggerService.log(`${task.name} is complete`);
       } else {
-        this.loggerService.log(`${task.text} is not complete`);
+        this.loggerService.log(`${task.name} is not complete`);
       }
     });
   }

@@ -1,6 +1,6 @@
 <div class="task" [ngClass]="{complete: task.completed}">
   <div class="task-info">
-    <h3>{{task.text}} <fa-icon [icon]="faTimes" size="lg" class="del-icon" (click)="handleClick(task)"></fa-icon>
+    <h3>{{task.name}} <fa-icon [icon]="faTimes" size="lg" class="del-icon" (click)="handleClick(task)"></fa-icon>
       <fa-icon [icon]="faCheck" size="lg" class="complete-icon" (click)="handleToggle(task)"></fa-icon>
     </h3>
     <p>{{task.time}}</p>
