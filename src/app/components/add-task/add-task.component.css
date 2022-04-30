@@ -1,0 +1,11 @@
+.add-task-form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.add-task-form input:first-child {
+  font-size: 1rem;
+  padding: 0.1rem;
+}
